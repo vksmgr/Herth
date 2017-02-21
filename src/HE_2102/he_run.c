@@ -49,6 +49,7 @@ int search(int elem, int* array, int len){
     for (int i = 0; i < len; i++) {
         if(elem == array[i])return 1;
     }
+    printf("%d", elem);
     return 0;
 }
 
