@@ -3,12 +3,14 @@
 //
 
 #include <stdio.h>
+#include <string.h>
+#include <conio.h>
 #include "he_2202.h"
 
 
 void he_2202_run(){
-    jarvis();
-    //test();
+    //jarvis();
+    test();
 }
 
 struct elem{
@@ -60,6 +62,23 @@ int energy(int num){
     return eng;
 }
 
+//===================
+
 int test(){
-    printf("%d", energy(432));
+    //digitProblem();
+    getNumber();
+}
+
+int getNumber(){
+    char array[50], c;
+    int i = -1, count;
+   scanf("%s %d",&array, &count);
+    i = strlen(array);
+    for (int j = 0; j < i; ++j) {
+        if ( j < count ){
+            if(array[j] == '9')count++;
+            printf("9");
+        }
+        else printf("%c",array[j]);
+    }
 }
